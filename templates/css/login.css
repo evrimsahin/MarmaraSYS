@@ -1,0 +1,96 @@
+* {
+  outline: none !important; }
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background-color: white;
+  background-image: url(https://media-cdn.t24.com.tr/media/library/2019/09/1569586138085-marmara-universitesi-ogretim-ve-arastirma-gorevlisi-alimi-2019-h-1556792434-90-c-93-c.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.center {
+  text-align: center;
+  margin-bottom: 2rem; }
+
+.btn-red {
+  background-color: #9f1c00;
+  color: white;
+  font-weight: bolder;
+  transition: .6s;
+  width: 100%; }
+
+.btn-red:hover {
+  color: white;
+  background-color: #cf1c00; }
+
+.row {
+  width: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .row .col {
+    width: 100%;
+    max-width: 325px;
+    background-color: rgba(150, 150, 150, 0.9);
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    -webkit-box-shadow: inset -32px 31px 27px -37px white;
+    -moz-box-shadow: inset -32px 31px 27px -37px white;
+    box-shadow: inset -32px 31px 27px -37px white; }
+    .row .col a {
+      padding: .2rem 2rem;
+      display: block;
+      width: 100%;
+      color: white; }
+
+.input-group-text {
+  border: none;
+  background-color: transparent; }
+
+.form-control:focus {
+  border: none;
+  box-shadow: none; }
+
+.input-group-text {
+  padding: 0 .5rem; }
+
+.img-wrapper {
+  text-align: center;
+  width: 100%; }
+  .img-wrapper img {
+    width: 100%;
+    max-width: 100px;
+    object-fit: cover; }
+
+form {
+  padding: 2rem;
+  font-family: 'Indie Flower', cursive; }
+  form h1 {
+    font-family: 'Indie Flower', cursive; }
+  form .input-group {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: .5rem; }
+    form .input-group input {
+      padding: .5rem;
+      background-color: transparent;
+      border: none;
+      color: white !important;
+      font-weight: bolder; }
+    form .input-group input:focus {
+      background-color: transparent; }
+  form .submit {
+    outline: none;
+    -webkit-box-shadow: inset -39px 36px 20px -37px white;
+    -moz-box-shadow: inset -39px 36px 20px -37px white;
+    box-shadow: inset -39px 36px 20px -37px white; }
+
+/*# sourceMappingURL=login.css.map */

@@ -32,7 +32,7 @@ class Student(models.Model):
 
 
     def __str__(self):
-        return self.studentNum + "   "+ self.studentName + "   " + self.studentSurname;
+        return self.studentNum
 
 
 

@@ -1,0 +1,44 @@
+@import "main";
+$fontcolor: #808080;
+.centered {
+    color: $orangecolor;
+}
+
+form {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+
+    .form-element {
+        display: flex;
+        margin: .5rem 0;
+        flex-direction: column;
+
+        label {
+            margin: .5rem 1rem;
+            transform: translate(0, 180%);
+            transition: .5s;
+            background-color: white;
+            width: fit-content;
+            color: $fontcolor;
+        }
+    }
+
+    input,
+    textarea {
+        content: " " !important;
+        padding: .5rem 1rem;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, .2);
+        outline: 0;
+        z-index: 100;
+        background-color: transparent;
+        transition: .4s;
+
+        &:focus {
+            border-color: $orangecolor;
+        }
+    }
+}

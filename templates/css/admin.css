@@ -1,0 +1,46 @@
+.page-content {
+  font-family: 'Roboto Slab', serif;
+  color: #0f0f0f; }
+
+.capitalize {
+  text-transform: capitalize; }
+
+h1 {
+  font-size: 2.2rem; }
+
+h2 {
+  font-size: 1.8rem; }
+
+.table-head-part {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: #bd0211; }
+
+.row {
+  margin: 0; }
+
+.new-row {
+  color: #bd0211;
+  transition: .5s ease;
+  padding: 0 1rem; }
+  .new-row:hover {
+    color: #580108; }
+
+th, td {
+  padding: 1rem 0.5rem !important; }
+
+.flexed-container {
+  display: flex;
+  flex-direction: column; }
+
+.centered {
+  text-align: center;
+  width: 100%; }
+
+.body-p {
+  text-indent: 2rem;
+  line-height: 1.4rem;
+  color: #3d3d3d; }
+
+/*# sourceMappingURL=admin.css.map */

@@ -1,0 +1,75 @@
+.page-content {
+  font-family: 'Roboto Slab', serif;
+  color: #0f0f0f; }
+
+.capitalize {
+  text-transform: capitalize; }
+
+h1 {
+  font-size: 2.2rem; }
+
+h2 {
+  font-size: 1.8rem; }
+
+.table-head-part {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: #bd0211; }
+
+.row {
+  margin: 0; }
+
+.new-row {
+  color: #bd0211;
+  transition: .5s ease;
+  padding: 0 1rem; }
+  .new-row:hover {
+    color: #580108; }
+
+th, td {
+  padding: 1rem 0.5rem !important; }
+
+.flexed-container {
+  display: flex;
+  flex-direction: column; }
+
+.centered {
+  text-align: center;
+  width: 100%; }
+
+.centered {
+  color: #bd0211; }
+
+form {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column; }
+  form .form-element {
+    display: flex;
+    margin: .5rem 0;
+    flex-direction: column; }
+    form .form-element label {
+      margin: .5rem 1rem;
+      transform: translate(0, 180%);
+      transition: .5s;
+      background-color: white;
+      width: fit-content;
+      color: #808080; }
+  form input,
+  form textarea {
+    content: " " !important;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: 0;
+    z-index: 100;
+    background-color: transparent;
+    transition: .4s; }
+    form input:focus,
+    form textarea:focus {
+      border-color: #bd0211; }
+
+/*# sourceMappingURL=intern.css.map */
