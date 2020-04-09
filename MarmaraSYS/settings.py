@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'student',
+    'phone_field',
+    'django_countries',
 ]
 
 MIDDLEWARE = [
@@ -76,13 +79,8 @@ WSGI_APPLICATION = 'MarmaraSYS.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'MarmaraSYS',
-        'USER': 'root',
-        'PASSWORD': 'ASDFghjk1234!',
-        'OPTIONS': {
-            'sql_mode': 'traditional',
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
