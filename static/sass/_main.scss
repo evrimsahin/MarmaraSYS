@@ -1,6 +1,9 @@
 $user-color: #0f0f0f;
 $orangecolor: #bd0211;
-
+ul{
+    list-style: none;
+    padding: 0;
+}
 .page-content{
     font-family: 'Roboto Slab', serif;
     color: $user-color;
@@ -16,13 +19,6 @@ h1{
 
 h2{
     font-size: 1.8rem;
-}
-
-.table-head-part{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    color: $orangecolor;
 }
 
 .row{

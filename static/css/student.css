@@ -1,0 +1,128 @@
+#test {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  z-index: 999; }
+  #test button {
+    background-color: transparent;
+    border: none;
+    outline: none; }
+  #test span {
+    width: 30px;
+    border-top: 2px solid blue;
+    padding: .2rem 0;
+    display: block; }
+  #test span:nth-child(2) {
+    width: 20px; }
+
+nav {
+  position: fixed;
+  background-color: black;
+  height: 100%;
+  z-index: 900;
+  right: 0;
+  color: white;
+  top: 0;
+  padding-top: 2rem;
+  transition: 1s;
+  width: 25rem;
+  overflow: hidden; }
+  nav ul {
+    width: 100%; }
+    nav ul li {
+      display: block;
+      width: 25rem;
+      text-align: center;
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      background-color: #909090;
+      padding: .5rem 0; }
+      nav ul li a {
+        color: white; }
+        nav ul li a:hover {
+          color: white; }
+
+.hidden-nav {
+  width: 0 !important; }
+
+.container {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 0;
+  margin-top: 1.5rem;
+  border-radius: .5rem; }
+
+.student-info {
+  padding-top: .5rem; }
+
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 350px; }
+
+a {
+  color: black;
+  display: block;
+  text-decoration: none; }
+  a:hover {
+    color: black;
+    text-decoration: none; }
+
+img {
+  width: 75%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1rem; }
+
+.student {
+  font-family: Roboto-Slab; }
+
+.student-id {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.2rem; }
+
+.hr {
+  border-top: 2px solid white;
+  border-radius: 5px;
+  width: 7rem;
+  margin: .2rem 0;
+  transform: translate(0, -0.5rem); }
+
+.stajlar h2 {
+  text-transform: uppercase;
+  text-align: center; }
+.stajlar .staj-unit {
+  padding: 1rem 2rem;
+  margin: 1rem 2rem;
+  border-radius: 1rem; }
+  .stajlar .staj-unit h4 {
+    font-size: 2rem; }
+  .stajlar .staj-unit .row {
+    border-radius: 5px;
+    padding: .5rem .1rem;
+    margin: .5rem 0; }
+    .stajlar .staj-unit .row h5 {
+      font-size: 1.5rem; }
+      .stajlar .staj-unit .row h5::after {
+        content: "";
+        display: block;
+        width: 7rem;
+        border-top: 2px solid white;
+        transform: translate(0, 2px); }
+  .stajlar .staj-unit .row:nth-child(odd) {
+    background-color: #dbdbdb; }
+    .stajlar .staj-unit .row:nth-child(odd) h5 {
+      color: #000; }
+      .stajlar .staj-unit .row:nth-child(odd) h5::after {
+        border-top: 2px solid black; }
+  .stajlar .staj-unit .row:nth-child(even) {
+    background-color: #000;
+    color: white; }
+    .stajlar .staj-unit .row:nth-child(even) h5 {
+      color: #dbdbdb; }
+.stajlar .staj-unit:nth-child(even) {
+  background-color: #c0c0c0; }
+.stajlar .staj-unit:nth-child(odd) {
+  background-color: #808080; }
+
+/*# sourceMappingURL=student.css.map */
