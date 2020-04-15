@@ -5,13 +5,13 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    {% load static %}
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fontawesome/css/all.css">
-    <link rel="stylesheet" href="css/admin.css">
-    <link rel="stylesheet" href="css/student.css">
+    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+    <link rel="stylesheet" href="{% static 'css/student.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
     <title>Hello, world!</title>
 </head>
@@ -23,18 +23,17 @@
             <span></span>
             <span></span>
         </button>
-        <div id="menu">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Settings</a></li>
-                <li><a href="">Log-Out</a></li>
-            </ul>
-        </div>
     </div>
-
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Log-out</a></li>
+      </ul>
+    </nav>
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-md-4 img-wrapper"><img src="no-user.png" alt=""></div>
+            <div class="col-xs-12 col-md-4 img-wrapper"><img src="{% static 'no-user.png' %}" alt=""></div>
             <div class="col-xs-12 col-md-8 student-info">
                 <h1 class="student student-name">Süleyman Barış Eser</h1>
                 <h3 class="student student-id">150116055</h3>
@@ -47,7 +46,7 @@
                 <div class="col">
                     <h4><a data-toggle="collapse" href="#staj-1" role="button" aria-expanded="false" aria-controls="collapseExample">Staj-1</a></h4>
                 </div>
-                <div id="staj-1" class="collapse mt-5">
+                <div id="staj-1" class="collapse mt-5 show">
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
                             <h5>Kurum</h5>
@@ -76,7 +75,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-4">
                             <h5>Telefon</h5>
-                            <p>+90 (545) 722 66 73</p>
+                            <p><a href="tel:05457226673">+90 (545) 722 66 73</a></p>
                         </div>
                         <div class="col-xs-12 col-md-4">
                             <h5>İlgili Kişi</h5>
@@ -84,7 +83,7 @@
                         </div>
                         <div class="col-xs-12 col-md-4">
                             <h5>E-posta</h5>
-                            <p>suleymanbariseser@gmail.com</p>
+                            <p><a href="mailto: suleymanbariseser@gmail.com">suleymanbariseser@gmail.com</a></p>
                         </div>
                     </div>
                     <div class="row">
@@ -260,7 +259,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script>
         $('#nav-controller').click(function() {
-            $('#menu').toggle();
+            $('nav').toggleClass('hidden-nav');
         });
 
     </script>
