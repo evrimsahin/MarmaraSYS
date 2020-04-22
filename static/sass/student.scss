@@ -1,0 +1,112 @@
+@import "studentpanel";
+
+.container {
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: 1.5rem 0;
+    margin-top: 1.5rem;
+    border-radius: .5rem;
+}
+
+.student-info {
+    padding-top: .5rem;
+}
+
+.img-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 350px;
+}
+a{
+    color: black;
+    display: block;
+    text-decoration: none;
+    &:hover{
+        color: black;
+        text-decoration: none;
+    }
+
+}
+img {
+    width: 75%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+}
+
+.student {
+    font-family: Roboto-Slab;
+}
+
+.student-id {
+    color: rgba(0, 0, 0, .7);
+    font-size: 1.2rem;
+}
+
+.hr {
+    border-top: 2px solid white;
+    border-radius: 5px;
+    width: 7rem;
+    margin: .2rem 0;
+    transform: translate(0, -.5rem);
+}
+
+.stajlar {
+    h2 {
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .staj-unit {
+        padding: 1rem 2rem;
+        margin: 1rem 2rem;
+        border-radius: 1rem;
+
+        h4 {
+            font-size: 2rem;
+        }
+
+        .row {
+            border-radius: 5px;
+            padding: .5rem .1rem;
+            margin: .5rem 0;
+
+            h5 {
+                font-size: 1.5rem;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 7rem;
+                    border-top: 2px solid white;
+                    transform: translate(0, 2px);
+                }
+            }
+        }
+
+        .row:nth-child(odd) {
+            background-color: #dbdbdb;
+
+            h5 {
+                color: #000;
+                &::after {
+                    border-top: 2px solid black;
+                }
+            }
+        }
+
+        .row:nth-child(even) {
+            background-color: #000;
+            color: white;
+
+            h5 {
+                color: #dbdbdb;
+            }
+        }
+    }
+    .staj-unit:nth-child(even){
+        background-color: #c0c0c0;
+    }
+    .staj-unit:nth-child(odd){
+        background-color: #808080;
+    }
+}
