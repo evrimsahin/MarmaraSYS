@@ -1,3 +1,7 @@
+ul {
+  list-style: none;
+  padding: 0; }
+
 .page-content {
   font-family: 'Roboto Slab', serif;
   color: #0f0f0f; }
@@ -10,12 +14,6 @@ h1 {
 
 h2 {
   font-size: 1.8rem; }
-
-.table-head-part {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  color: #bd0211; }
 
 .row {
   margin: 0; }

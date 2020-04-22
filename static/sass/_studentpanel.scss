@@ -1,0 +1,59 @@
+#test{
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    z-index: 999;
+    button{
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
+    span{
+        width: 30px;
+        border-top: 2px solid blue;
+        padding: .2rem 0;
+        display: block;
+    }
+    span:nth-child(2){
+      width: 20px;
+    }
+}
+
+nav{
+  position: fixed;
+  background-color: black;
+  height: 100%;
+  z-index: 900;
+  right: 0;
+  color: white;
+  top: 0;
+  padding-top: 2rem;
+  transition: 1s;
+  width: 25rem;
+  overflow: hidden;
+
+  ul{
+    width: 100%;
+
+    li{
+      display: block;
+      width: 25rem;
+      text-align: center;
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      background-color: #909090;
+      padding: .5rem 0;
+
+      a{
+        color: white;
+        &:hover{
+          color: white;
+        }
+      }
+    }
+  }
+}
+.hidden-nav{
+  width: 0!important;
+}
