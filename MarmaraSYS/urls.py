@@ -20,6 +20,6 @@ from index.views import indexview
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/',loginview),
-    path('', indexview)
+    path('',loginview),
+    path('index/', indexview)
 ]
