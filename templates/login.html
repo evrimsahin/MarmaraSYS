@@ -21,7 +21,8 @@
                <div class="img-wrapper">
                 <img src="https://upload.wikimedia.org/wikipedia/tr/7/70/Marmara_%C3%9Cniversitesi_logo.png" alt="">
                 </div>
-                <form class="form">
+                <form method="post">
+                    {% csrf_token %}
                     <div class="input-group mb-4 mr-sm-2">
                         <div class="input-group-prepend">
                             <div class="input-group-text"><i class="fas fa-user"></i></div>
