@@ -7094,7 +7094,7 @@ file-invoice:
   label: File Invoice
   search:
     terms:
-      - account
+      - accounts
       - bill
       - charge
       - document
@@ -7112,7 +7112,7 @@ file-invoice-dollar:
   search:
     terms:
       - $
-      - account
+      - accounts
       - bill
       - charge
       - document
@@ -19391,7 +19391,7 @@ user:
   label: User
   search:
     terms:
-      - account
+      - accounts
       - avatar
       - head
       - human
@@ -19411,7 +19411,7 @@ user-alt:
   label: Alternate User
   search:
     terms:
-      - account
+      - accounts
       - avatar
       - head
       - human
@@ -19428,7 +19428,7 @@ user-alt-slash:
   label: Alternate User Slash
   search:
     terms:
-      - account
+      - accounts
       - avatar
       - head
       - human
@@ -19480,7 +19480,7 @@ user-circle:
   label: User Circle
   search:
     terms:
-      - account
+      - accounts
       - avatar
       - head
       - human
