@@ -1,0 +1,53 @@
+{% extends "admin/base.html" %}
+
+{% block title %}
+MarmaraSYS Admin Panel
+{% endblock %}
+
+{% block extrastyle %}
+    <style>
+        #site-name a img{
+            width: 7rem;
+            height: 7rem;
+        }
+        #header{
+            background-color: #c0c0c0;
+            border-bottom: 1px solid rgba(0,0,0,.1);
+            color: black;
+        }
+        #header a{
+            color: black!important;
+        }
+        .submit-row{
+            text-align: right!important;
+        }
+        .submit-row input{
+            background-color: #c0c0c0!important;
+            font-weight: bolder;
+            transition: .4s;
+        }
+        .submit-row input:hover{
+            background-color: black!important;
+            color: c0c0c0;
+        }
+        .module caption{
+            background-color: #c0c0c0;
+            font-weight: bold;
+        }
+        .breadcrumbs{
+            background-color: #a0a0a0!important;
+        }
+        .dashboard #content{
+            width: auto;
+        }
+        a:link, a:visited{
+            color: black;
+            font-size: 1rem;
+        }
+    </style>
+{% endblock %}
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}"><img src="https://upload.wikimedia.org/wikipedia/tr/7/70/Marmara_%C3%9Cniversitesi_logo.png" alt="Admin Panel"></a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
