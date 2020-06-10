@@ -14,23 +14,25 @@
 			margin: 0;
 			padding: 0;
 			height: 100%;
-			background: #7abecc !important;
+			background-image: url(https://ues.marmara.edu.tr//static/loginbackgroundimage/FD77EC73266B366BAD26C7C04DC82CEF.png);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
 		.user_card {
 			width: 350px;
 			margin-top: auto;
 			margin-bottom: auto;
-			background: #74cfbf;
+			background: white;
 			position: relative;
 			display: flex;
 			justify-content: center;
 			flex-direction: column;
-			padding: 10px;
+			padding: 2rem;
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			border-radius: 5px;
-
+			border-radius: 1rem;
 		}
 
 		.form_container {
@@ -38,14 +40,21 @@
 		}
 
 		#form-title{
-			color: #fff;
-
+			width: 10rem;
+			height: 10rem;
 		}
-
 		.login_btn {
-			width: 100%;
-			background: #33ccff !important;
+			background: red !important;
+			padding: .2rem 2rem;
 			color: white !important;
+			transition: .4s;
+			font-weight: bold;
+		}
+		.login_btn:hover {
+			background: darkred !important;
+		}
+		.right-aligned{
+			text-align: right;
 		}
 		.login_btn:focus {
 			box-shadow: none !important;
@@ -55,7 +64,7 @@
 			padding: 0 2rem;
 		}
 		.input-group-text {
-			background: #f7ba5b !important;
+			background: red !important;
 			color: white !important;
 			border: 0 !important;
 			border-radius: 0.25rem 0 0 0.25rem !important;
@@ -81,8 +90,7 @@
 			<div class="user_card">
 				<div class="d-flex justify-content-center">
 
-
-					<h3 id="form-title">LOGIN</h3>
+					<img src="https://upload.wikimedia.org/wikipedia/tr/7/70/Marmara_%C3%9Cniversitesi_logo.png" id="form-title" alt="">
 				</div>
 				<div class="d-flex justify-content-center form_container">
 					<form method="POST" action="">
@@ -95,7 +103,7 @@
 							<input type="text" name="username" placeholder="Username..." class="form-control">
 						</div>
 
-						<div class="input-group mb-2">
+						<div class="input-group mb-4">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
@@ -103,7 +111,7 @@
 								<input type="password" name="password" placeholder="Password..." class="form-control" >
 						</div>
 
-							<div class="d-flex justify-content-center mt-3 login_container">
+							<div class="mt-3 right-aligned">
 				 				<input class="btn login_btn" type="submit" value="Login">
 				   			</div>
 					</form>
@@ -116,7 +124,7 @@
 
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
-						Don't have an account? <a href="{% url 'register' %}" class="ml-2">Sign Up</a>
+						<!-- Don't have an account? <a href="{% url 'register' %}" class="ml-2">Sign Up</a> -->
 					</div>
 
 				</div>
