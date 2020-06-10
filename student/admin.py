@@ -1,8 +1,6 @@
 from django.contrib import admin
 from .models import Student,InternShip,InternShipHiddenFields
-from . import models
 
-# Register your models here.
 class internShipInLine(admin.StackedInline):
     model = InternShip
     extra = 0
@@ -13,8 +11,8 @@ class internShipHiddenInLine(admin.StackedInline):
 
 class Lecturer(admin.ModelAdmin):
     inlines = [internShipInLine,internShipHiddenInLine]
-    list_display = ['studentNum','studentName','studentSurname']
-    search_fields = ['studentNum','studentName','tcNum','startDate']
+    list_display = ['user','studentNum','studentName','studentSurname']
+    search_fields = ['studentNum','studentName','tcNum','internship__startDate']
 
 
 admin.site.register(Student,Lecturer)
