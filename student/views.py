@@ -19,7 +19,7 @@ def loginPage(request):
 
             user = authenticate(request, username=username, password=password)
 
-            if user is not None and request.user.is_staff:
+            if user is not None and user.is_staff is not None:
                 login(request, user)
                 return redirect('index')
             else:
@@ -55,12 +55,12 @@ def change_password(request):
             messages.success(request, 'Your password was successfully updated!')
             return redirect('change_password')
         else:
+
+
             messages.error(request, 'Please correct the error below.')
     else:
         form = PasswordChangeForm(request.user)
-    return render(request, 'accounts/change_password.html', {
-        'form': form
-    })
+    return render(request, 'accounts/change_password.html')
 
 
 @login_required(login_url='admin')
