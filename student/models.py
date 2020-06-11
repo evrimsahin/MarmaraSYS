@@ -35,8 +35,8 @@ class Student(models.Model):
     studentNum = models.CharField('Öğrenci Numarası', max_length=9, validators=[MinLengthValidator(9), numeric])
 
     class Meta:
-        verbose_name = ("Kullanıcı")
-        verbose_name_plural = ("Kullanıcılar")
+        verbose_name = ("Öğrenci")
+        verbose_name_plural = ("Öğrenciler")
 
     def __str__(self):
         return "%s \t %s \t %s" % (self.studentNum, self.studentName, self.user.username)
@@ -78,6 +78,11 @@ class InternShipHiddenFields(models.Model):
     internshipDiger = models.ImageField('Değerlendirme Formu', upload_to='uploads/')
     firmaDegerlendirme = models.CharField('Firma Değerlendirme',choices=firmaDegerlendirme,max_length=20)
     firmaYorumu = models.TextField('Firma Yorumu')
+    notOrtalaması = models.IntegerField('Not Ortalaması',blank=True)
+
+    def save(self, *args, **kwargs):
+        self.notOrtalaması = (self.internshipArkadas +self.internshipDevamNotu+self.internshipZamanNotu+self.internshipCalismaNotu+self.internshipAmirNotu)/5
+        super(InternShipHiddenFields, self).save(*args, **kwargs)
 
     class Meta:
         verbose_name = ("Staj Bilgileri(Gizli İçerik)")
