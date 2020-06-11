@@ -35,8 +35,8 @@ class Student(models.Model):
     studentNum = models.CharField('Öğrenci Numarası', max_length=9, validators=[MinLengthValidator(9), numeric])
 
     class Meta:
-        verbose_name = ("Öğrenci")
-        verbose_name_plural = ("Öğrenciler")
+        verbose_name = ("Kullanıcı")
+        verbose_name_plural = ("Kullanıcılar")
 
     def __str__(self):
         return "%s \t %s \t %s" % (self.studentNum, self.studentName, self.user.username)
