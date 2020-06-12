@@ -12,7 +12,7 @@ internshipTypeChocies = (("Akademik", "Akademik"),
 internshipAbroadOrDomesticChoices = (("Yurt Dışı", "Yurt Dışı"),
                                      ("Yurt İçi", "Yurt İçi"))
 firmaDegerlendirme = (("Olumlu", "Olumlu"),
-                     ("Olumsuz", "Olumsuz"))
+                      ("Olumsuz", "Olumsuz"))
 numeric = RegexValidator(r'[0-9]', 'Only numeric characters are allowed.')
 
 
@@ -76,12 +76,13 @@ class InternShipHiddenFields(models.Model):
     internshipAmirNotu = models.IntegerField('Amirine Karşı Tutumu Notu')
     internshipArkadas = models.IntegerField('İşçi ve Arkadaşlarına Karşı Tutumu Notu')
     internshipDiger = models.ImageField('Değerlendirme Formu', upload_to='uploads/')
-    firmaDegerlendirme = models.CharField('Firma Değerlendirme',choices=firmaDegerlendirme,max_length=20)
+    firmaDegerlendirme = models.CharField('Firma Değerlendirme', choices=firmaDegerlendirme, max_length=20)
     firmaYorumu = models.TextField('Firma Yorumu')
-    notOrtalaması = models.IntegerField('Not Ortalaması',blank=True)
+    notOrtalaması = models.IntegerField('Not Ortalaması', blank=True)
 
     def save(self, *args, **kwargs):
-        self.notOrtalaması = (self.internshipArkadas +self.internshipDevamNotu+self.internshipZamanNotu+self.internshipCalismaNotu+self.internshipAmirNotu)/5
+        self.notOrtalaması = (
+                                         self.internshipArkadas + self.internshipDevamNotu + self.internshipZamanNotu + self.internshipCalismaNotu + self.internshipAmirNotu) / 5
         super(InternShipHiddenFields, self).save(*args, **kwargs)
 
     class Meta:

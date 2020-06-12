@@ -8,5 +8,6 @@ urlpatterns = [
     path('index/', views.indexPage, name="index"),
     path('logout/', views.logoutUser, name="logout"),
     path('change_password/', views.change_password, name='change_password'),
-    path(r'^export/xls/$', views.export_users_xls, name='export_users_xls'),
+    path('excel_2018_2019', views.export_users_xls_2018_2019, name='export_users_xls_2018_2019'),
+    path('excel_2019', views.export_users_xls_2019, name='export_users_xls_2019'),
 ]
