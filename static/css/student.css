@@ -47,13 +47,15 @@ nav {
   width: 0 !important; }
 
 .container {
-  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1.5rem 0;
   margin-top: 1.5rem;
   border-radius: .5rem; }
 
 .student-info {
-  padding-top: .5rem; }
+  padding-top: .5rem;
+  width: 100%;
+  text-align: right;
+}
 
 .img-wrapper {
   display: flex;
@@ -124,5 +126,3 @@ img {
   background-color: #c0c0c0; }
 .stajlar .staj-unit:nth-child(odd) {
   background-color: #808080; }
-
-/*# sourceMappingURL=student.css.map */
