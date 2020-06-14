@@ -44,10 +44,25 @@ MarmaraSYS Admin Panel
             color: black;
             font-size: 1rem;
         }
+<<<<<<< HEAD
+        #branding h1{
+            margin: 0;
+        }
+=======
+>>>>>>> master
     </style>
 {% endblock %}
 {% block branding %}
 <h1 id="site-name"><a href="{% url 'admin:index' %}"><img src="https://upload.wikimedia.org/wikipedia/tr/7/70/Marmara_%C3%9Cniversitesi_logo.png" alt="Admin Panel"></a></h1>
 {% endblock %}
 
+<<<<<<< HEAD
 {% block nav-global %}{% endblock %}
+{% block extrascript %}
+<script>
+    document.querySelector('#changelist').append('solo');
+</script>
+{% endblock %}
+=======
+{% block nav-global %}{% endblock %}
+>>>>>>> master

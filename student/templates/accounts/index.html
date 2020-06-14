@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'fontawesome/css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'css/student.css'%}">
+    <link rel="stylesheet" href="{% static 'css/admin.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <style>
+    .student-info {
+        padding-top: .5rem;
+        width: 100%;
+        text-align: center;
+    }
+    .student-info{
+        padding: 2rem;
+    }
+    .container{
+        border: none;
+        background-color: rgba(0, 0, 0, .1);
+        border-radius: 5px;
+    }
+    </style>
+    <title>MarmaraSYS Öğrenci Paneli</title>
+</head>
+
+<body>
+    <div id="test">
+        <button id="nav-controller">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <nav class="hidden-nav">
+      <ul>
+        <li><a href="{% url 'index' %}">Ana Sayfa</a></li>
+        <li><a href="{% url 'change_password' %}">Şifreyi Değiştir</a></li>
+        <li><a href="{% url 'logout' %}">Çıkış</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="student-info">
+                <h1 class="student student-name">Hoşgeldiniz <b><i>{{ user.student.studentName }} {{ user.student.studentSurname }}</i></b></h1>
+                <h3 class="student student-id">Öğrenci Id: <b><i>{{ user.student.studentNum }}</i></b></h3>
+                <h4 class="student student-id">Toplam Staj Sayısı: <b><i>{{ user.student.internship_set.count }}</i></b></h4>
+                <h4 class="student student-id">Kalan Staj Gün Sayısı: <i><b><span id="total-sum"></span></b></i></h4>
+            </div>
+        </div>
+        <div class="stajlar mt-5">
+            <h2>Stajlar</h2>
+            {% for intern in user.student.internship_set.all %}
+            <div class="staj-unit">
+                <div class="col">
+                    <h4>{{ intern.companyName }}</h4>
+                </div>
+                <div id="staj-1" class="mt-5">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <h5>Kurum</h5>
+                            <p>{{ intern.companyName }}</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <h5>Hizmet Alanı</h5>
+                            <p>{{ intern.catchment }}</p>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4">
+                            <h5>Başlangıç Tarihi</h5>
+                            <p>{{ intern.startDate }}</p>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <h5>Bitiş Tarihi</h5>
+                            <p>{{ intern.finishDate }}</p>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <h5>Süresi</h5>
+                            <p><span class="duration">{{ intern.internshipDuration }}</span> gün</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4">
+                            <h5>Telefon</h5>
+                            <p>{{ intern.companyPhoneNum }}</p>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <h5>İlgili Kişi</h5>
+                            <p>{{ intern.companyMentorName }}</p>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <h5>E-posta</h5>
+                            <p>{{ intern.email }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h5>Adres</h5>
+                            <p>{{ intern.companyAddress }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <h5>Mühendis Sayısı</h5>
+                            <p>{{ intern.numberOfEngineers }}</p>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <h5>Staj Tipi</h5>
+                            <p>{{ intern.internshipType }}</p>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <h5>Yurtiçi/Yurtdışı</h5>
+                            <p>{{ intern.internshipAbroadOrDomestic }}</p>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <h5>Ülke/Şehir</h5>
+                            <p>{{ intern.companyCountry }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        $('#nav-controller').click(function() {
+            $('nav').toggleClass('hidden-nav');
+        });
+         const durations = $('.duration');
+         let sum = 0;
+         for(let i = 0; i < durations.length; i++ ){
+             sum += parseInt(durations[i].innerHTML);
+         }
+         $('#total-sum').html(60 - sum);
+    </script>
+</body>
+
+</html>
