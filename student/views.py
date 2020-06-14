@@ -60,8 +60,6 @@ def change_password(request):
             logout(request)
             return redirect('login')
         else:
-
-
             messages.error(request, 'Hatalı Yeni Şifre Denemesi')
     else:
         form = PasswordChangeForm(request.user)

@@ -4,7 +4,6 @@
 {% block extrastyle %}
 <style>
   .import{
-    margin-top: 3rem;
     float: right;
   }
   .importxls{
@@ -83,6 +82,10 @@
               <a href="{{ cl.clear_all_filters_qs }}">&#10006;</a>
             </h3>{% endif %}
             {% for spec in cl.filter_specs %}{% admin_list_filter cl spec %}{% endfor %}
+            <div class="import">
+              <a href="/excel_2019" class="importxls">Excele Rapor Çıkar(2019)</a>
+              <a href="/excel_2018_2019" class="importxls">Excele Rapor Çıkar(2018-2019)</a>
+            </div>
           </div>
         {% endif %}
       {% endblock %}
@@ -99,10 +102,6 @@
       {% endblock %}
       {% block pagination %}{% pagination cl %}{% endblock %}
       </form>
-      <div class="import">
-      <a href="/excel_2019" class="importxls">Excele Rapor Çıkar(2019)</a>
-      <a href="/excel_2018_2019" class="importxls">Excele Rapor Çıkar(2018-2019)</a>
-    </div>
     </div>
   </div>
 {% endblock %}

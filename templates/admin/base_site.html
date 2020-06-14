@@ -44,6 +44,9 @@ MarmaraSYS Admin Panel
             color: black;
             font-size: 1rem;
         }
+        #branding h1{
+            margin: 0;
+        }
     </style>
 {% endblock %}
 {% block branding %}
@@ -51,3 +54,8 @@ MarmaraSYS Admin Panel
 {% endblock %}
 
 {% block nav-global %}{% endblock %}
+{% block extrascript %}
+<script>
+    document.querySelector('#changelist').append('solo');
+</script>
+{% endblock %}
