@@ -78,10 +78,10 @@ class InternShipHiddenFields(models.Model):
     internshipDiger = models.ImageField('Değerlendirme Formu', upload_to='uploads/')
     firmaDegerlendirme = models.CharField('Firma Değerlendirme', choices=firmaDegerlendirme, max_length=20)
     firmaYorumu = models.TextField('Firma Yorumu')
-    notOrtalaması = models.IntegerField('Not Ortalaması', blank=True)
+    notOrtalamasi = models.IntegerField('Not Ortalaması', blank=True)
 
     def save(self, *args, **kwargs):
-        self.notOrtalaması = (
+        self.notOrtalamasi = (
                                          self.internshipArkadas + self.internshipDevamNotu + self.internshipZamanNotu + self.internshipCalismaNotu + self.internshipAmirNotu) / 5
         super(InternShipHiddenFields, self).save(*args, **kwargs)
 
