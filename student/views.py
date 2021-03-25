@@ -74,23 +74,26 @@ def export_users_xls_2018_2019(request):
     wb = xlwt.Workbook(encoding='utf-8')
     ws = wb.add_sheet('Students')
 
-
     row_num = 0
 
     font_style = xlwt.XFStyle()
     font_style.font.bold = True
 
-    columns = ['Numara','Ad', 'Soyad', 'TC No','Şirket Adı','Başlangıç Tarihi','Bitiş Tarihi','Staj Süresi','Hizmet Alanı','Firma İlgili Kişi','Firma E-Posta','Şirket Adresi','Çalışan Mühendis Sayısı','Staj Tipi','Yurtiçi / YurtDışı Staj']
+    columns = ['Numara', 'Ad', 'Soyad', 'TC No', 'Şirket Adı', 'Başlangıç Tarihi', 'Bitiş Tarihi', 'Staj Süresi',
+               'Hizmet Alanı', 'Firma İlgili Kişi', 'Firma E-Posta', 'Şirket Adresi', 'Çalışan Mühendis Sayısı',
+               'Staj Tipi', 'Yurtiçi / YurtDışı Staj']
 
     for col_num in range(len(columns)):
         ws.write(row_num, col_num, columns[col_num], font_style)
 
-
     font_style = xlwt.XFStyle()
 
-    rows = Student.objects.filter(internship__startDate__range=["2018-01-01", "2019-01-01"]).all().values_list('studentNum','studentName','studentSurname','tcNum','internship__companyName','internship__startDate','internship__finishDate','internship__internshipDuration',
-                                                                                                               'internship__catchment','internship__companyMentorName','internship__email','internship__companyAddress','internship__numberOfEngineers',
-                                                                                                               'internship__internshipType','internship__companyCountry','internship__internshipAbroadOrDomestic')
+    rows = Student.objects.filter(internship__startDate__range=["2018-01-01", "2019-01-01"]).all().values_list(
+        'studentNum', 'studentName', 'studentSurname', 'tcNum', 'internship__companyName', 'internship__startDate',
+        'internship__finishDate', 'internship__internshipDuration',
+        'internship__catchment', 'internship__companyMentorName', 'internship__email', 'internship__companyAddress',
+        'internship__numberOfEngineers',
+        'internship__internshipType', 'internship__companyCountry', 'internship__internshipAbroadOrDomestic')
 
     for row in rows:
         row_num += 1
@@ -109,24 +112,26 @@ def export_users_xls_2019(request):
     wb = xlwt.Workbook(encoding='utf-8')
     ws = wb.add_sheet('Students')
 
-
     row_num = 0
 
     font_style = xlwt.XFStyle()
     font_style.font.bold = True
 
-    columns = ['Numara','Ad', 'Soyad', 'TC No','Şirket Adı','Başlangıç Tarihi','Bitiş Tarihi','Staj Süresi','Hizmet Alanı','Firma İlgili Kişi','Firma E-Posta','Şirket Adresi','Çalışan Mühendis Sayısı','Staj Tipi','Yurtiçi / YurtDışı Staj']
-
+    columns = ['Numara', 'Ad', 'Soyad', 'TC No', 'Şirket Adı', 'Başlangıç Tarihi', 'Bitiş Tarihi', 'Staj Süresi',
+               'Hizmet Alanı', 'Firma İlgili Kişi', 'Firma E-Posta', 'Şirket Adresi', 'Çalışan Mühendis Sayısı',
+               'Staj Tipi', 'Yurtiçi / YurtDışı Staj']
 
     for col_num in range(len(columns)):
         ws.write(row_num, col_num, columns[col_num], font_style)
 
-
     font_style = xlwt.XFStyle()
 
-    rows = Student.objects.filter(internship__startDate__range=["2019-01-01", "2020-01-01"]).all().values_list('studentNum','studentName','studentSurname','tcNum','internship__companyName','internship__startDate','internship__finishDate','internship__internshipDuration',
-                                                                                                               'internship__catchment','internship__companyMentorName','internship__email','internship__companyAddress','internship__numberOfEngineers',
-                                                                                                               'internship__internshipType','internship__companyCountry','internship__internshipAbroadOrDomestic')
+    rows = Student.objects.filter(internship__startDate__range=["2019-01-01", "2020-01-01"]).all().values_list(
+        'studentNum', 'studentName', 'studentSurname', 'tcNum', 'internship__companyName', 'internship__startDate',
+        'internship__finishDate', 'internship__internshipDuration',
+        'internship__catchment', 'internship__companyMentorName', 'internship__email', 'internship__companyAddress',
+        'internship__numberOfEngineers',
+        'internship__internshipType', 'internship__companyCountry', 'internship__internshipAbroadOrDomestic')
 
     for row in rows:
         row_num += 1
